@@ -1,4 +1,11 @@
 # Master iLORD - Tests et intégration de logiciels distribués 
+
+## Environnement de développement
+Vous travaillez en binôme avec des machines disposant des logiciels Git et IntelliJ.
+Vous pouvez travaillez sur vos propres machines à condition d'installer ces deux logiciels :
+
+- Git : https://git-scm.com/downloads
+- IntelliJ IDEA édition **Utimate** : https://www.jetbrains.com/idea/#chooseYourEdition
  
 ## TP1 - Découverte de l'environnement de travail
 
@@ -7,8 +14,13 @@
 - Rendez vous sur le plateforme Web [Github](https://github.com/) et créez un compte sur la plateforme.
 - Rendez vous sur le devoir correspondant à nos [travaux pratiques](https://classroom.github.com/group-assignment-invitations/c40767b41493090001d29c1b93c8c4f3).
 - *Clonez* le projet dans votre espace de travail en utilisant la commande *git clone https://..."*
-- Créez la branche *develop* dans votre repository local et *pushez* la branche sur Github à l'aide de la commande suivante :
+
+Dans la suite du TP, le terme "M1" désigne le premier membre de votre binôme et "M2" désigne le deuxième membre du binôme. Les énoncés des 
+questions préfixés par "M1:" sont à réaliser par M1 uniquement alors que les énoncés préfixés par "M2:" sont à réaliser par M2 uniquement.
+
+- M1: Créez la branche *develop* dans votre repository local et *pushez* la branche sur Github à l'aide de la commande suivante :
 *"git push -u origin develop"* . 
+- M2: Récupérez la branche develop qui a été créee sur Github à l'aide de la commande suivante : *"git pull origin develop"*
 - Ouvrez le projet avec IntelliJ.
 
 ### 2. Premiers pas avec Maven
