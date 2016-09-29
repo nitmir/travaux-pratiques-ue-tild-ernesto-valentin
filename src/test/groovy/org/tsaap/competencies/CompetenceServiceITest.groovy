@@ -41,7 +41,7 @@ class CompetenceServiceITest extends Specification {
         when: "the catalog is saved"
         competenceService.saveCatalog(catalog);
 
-        then: "the a validation exception is thrown"
+        then: "a validation exception is thrown"
         thrown ConstraintViolationException
     }
 
