@@ -33,8 +33,22 @@ questions préfixés par "M1:" sont à réaliser par M1 uniquement alors que les
 
 ### 3. Premiers avec Spring-Boot et la notion de "repository"
 
-- Étudiez le code source de l'application.
+- Étudiez le code source du projet.
 - Appuyez vous sur la doucmentation de [Spring Data JPA](http://docs.spring.io/spring-data/jpa/docs/1.11.0.M1/reference/html/) pour comprendre le code de l'application.
 - Complétez l'application de telle sorte que le service *CompetenceService* permette la sauvegarde d'un objet de type Categorie (ajout de la méthode *saveCategory(Category cat)*) puis d'un objet de type Comptence (ajout de la méthode *saveCompetence(Competence comp)*).
 - À l'issue de votre travail la couvertude du code par les tests doit être supérieure à 90% ; les tests doivent tester les cas de succès, les cas d'erreur, etc.
 
+## TP2 - Mise en place de l'intégration continue
+
+### 1. Mise en place de Travis CI
+
+- Créez un compte sur la plateforme [Travis-CI](https://travis-ci.org/) en vous authentifiant via votre compte Github.
+- En vous appuyant sur la [documentation de Travis-CI](https://docs.travis-ci.com/), faites en sorte que votre projet déclenche
+l'exécution des tests de manière automatique sur Travis-CI.
+
+### 2. Mise en place de Coveralls
+
+- Créez un compte sur la plateforme [Coveralls](https://coveralls.io/) en vous authentifiant via votre compte Github.
+- Mettez en place le [plugin maven](https://github.com/trautonen/coveralls-maven-plugin) permettant d'interfacer un projet Maven avec Coveralls.
+- Modifiez votre fichier de configuration travis pour qu'en cas de succès, le rapport des tests cobertura soit envoyé sur Coveralls.
+- Testez votre configuration et visitez les rapports Coveralls de votre projet.
