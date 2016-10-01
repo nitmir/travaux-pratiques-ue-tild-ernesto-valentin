@@ -42,6 +42,14 @@ questions préfixés par "M1:" sont à réaliser par M1 uniquement alors que les
 
 ### 1. Mise en place de Travis CI
 
+- Tâches préliminaires à exécuter par un des membres du binôme (M1): 
+    - rajouter la ligne suivante dans le fichier *.gitignore* : 
+        !maven-wrapper.jar
+    - récupérez le fichier [*maven-wrapper.jar*](https://github.com/Master-iLORD/AssessedCompetencies/raw/master/.mvn/wrapper/maven-wrapper.jar) et déposez le
+    dans le dossier *.mvn/wrapper*.
+    - committez et pushez les fichiers *maven-wrapper.jar* et *.gitignore* sur votre branche courante.
+- Tâche préliminaire à éxécuter par l'autre membre du binôme (M2):
+    - récupérer la dernière version de la branche courante en exécuant une commande *git pull ...*
 - Créez un compte sur la plateforme [Travis-CI](https://travis-ci.org/) en vous authentifiant via votre compte Github.
 - En vous appuyant sur la [documentation de Travis-CI](https://docs.travis-ci.com/), faites en sorte que votre projet déclenche
 l'exécution des tests de manière automatique sur Travis-CI.
