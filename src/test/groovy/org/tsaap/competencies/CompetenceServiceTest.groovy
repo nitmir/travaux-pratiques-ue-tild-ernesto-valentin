@@ -57,4 +57,29 @@ class CompetenceServiceTest extends Specification {
         then: "competence repository save is triggered"
             1 * competenceRepository.save(competence)
     }
+
+    def "test competence service setters"() {
+        given: "3 new competence, catalog and category repository and a competence, a catalog and a category"
+        def catalogRepository_new = Mock(CatalogRepository)
+        def categoryRepository_new = Mock(CategoryRepository)
+        def competenceRepository_new = Mock(CompetenceRepository)
+        def catalog = Mock(Catalog)
+        def category = Mock(Category)
+        def competence = Mock(Competence)
+
+        when: "set the new competence, catalog and category repository and try to save objects"
+        competenceService.setCatalogRepository(catalogRepository_new)
+        competenceService.setCategoryRepository(categoryRepository_new)
+        competenceService.setCompetenceRepository(competenceRepository_new)
+        competenceService.saveCatalog(catalog)
+        competenceService.saveCategory(category)
+        competenceService.saveCompetence(competence)
+
+        then: "The catalog, category and competence are saved in the new repository"
+        1 * catalogRepository_new.save(catalog)
+        1 * categoryRepository_new.save(category)
+        1 * competenceRepository_new.save(competence)
+    }
+
+
 }
