@@ -65,6 +65,7 @@ class CompetenceServiceITest extends Specification {
         Category category = new Category()
         category.setName("C2")
         category.setDescription("Description 2")
+        // Name is too short
 
         when: "the category is saved"
         competenceService.saveCategory(category)
@@ -101,6 +102,7 @@ class CompetenceServiceITest extends Specification {
         Competence competence = new Competence()
         competence.setName("C1")
         competence.setDescription("Description de la competence 1")
+        // Name is too short, category and catalog are missing
 
         when: "the competence is saved"
         competenceService.saveCompetence(competence)
