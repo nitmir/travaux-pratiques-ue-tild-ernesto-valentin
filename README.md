@@ -6,6 +6,13 @@ Vous pouvez travaillez sur vos propres machines à condition d'installer ces deu
 
 - Git : https://git-scm.com/downloads
 - IntelliJ IDEA édition **Utimate** : https://www.jetbrains.com/idea/#chooseYourEdition
+
+## Modalités d'évaluation
+
+Les TPs donnent lieu à une note construite sur la base : 
+
+- de votre assiduité et de votre attitude en TP ;
+- de vos contributions sur le projet qui seront révélées par l'historique des commits sur votre projet Github.
  
 ## TP1 - Découverte de l'environnement de travail
 
