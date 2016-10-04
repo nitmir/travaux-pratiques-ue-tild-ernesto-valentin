@@ -3,6 +3,7 @@ package org.tsaap.competencies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.tsaap.competencies.repositories.CatalogRepository;
+import org.tsaap.competencies.repositories.CompetenceRepository;
 
 /**
  * Service to manage competencies
@@ -12,13 +13,20 @@ public class CompetenceService {
 
     @Autowired
     private CatalogRepository catalogRepository;
+    private CompetenceRepository mCompetenceRepository;
 
-    public CompetenceService(CatalogRepository catalogRepository) {
-        this.catalogRepository = catalogRepository ;
+    public CompetenceService(CatalogRepository catalogRepository,
+                             CompetenceRepository competenceRepository) {
+        this.catalogRepository = catalogRepository;
+        this.mCompetenceRepository = competenceRepository;
     }
 
     public void setCatalogRepository(CatalogRepository catalogRepository) {
         this.catalogRepository = catalogRepository;
+    }
+
+    public void setCompetenceRepository(CompetenceRepository mCompetenceRepository) {
+        this.mCompetenceRepository = mCompetenceRepository;
     }
 
     /**
@@ -31,4 +39,13 @@ public class CompetenceService {
         return res;
     }
 
+    /**
+     * save a competence in the database
+     * @param aCompetence the competence to save
+     * @return the competence
+     */
+    public Competence saveCompetence(Competence aCompetence){
+        Competence res = mCompetenceRepository.save(aCompetence);
+        return res;
+    }
 }

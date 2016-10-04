@@ -45,4 +45,31 @@ class CompetenceServiceITest extends Specification {
         thrown ConstraintViolationException
     }
 
+    def "test save a valid competence"(){
+        given: "a valid competence"
+            Competence competence = new Competence()
+            competence.setName("Competence 1")
+            competence.setDescription("Description de la competence 1")
+
+        when: "the competence is saved"
+            competenceService.saveCompetence(competence)
+
+        then: "the competence newly added has an id"
+            competence.getId() != null
+            competence.getName() == "Competence 1"
+            competence.getDescription() == "Description de la competence 1"
+    }
+
+    def "test save a non valid competence"(){
+        given: "a non valid competence"
+        Competence competence = new Competence()
+        competence.setName("C1")
+        competence.setDescription("Description de la competence 1")
+
+        when: "the competence is saved"
+        competenceService.saveCompetence(competence)
+
+        then: "the a validation exception is thrown"
+        thrown ConstraintViolationException
+    }
 }

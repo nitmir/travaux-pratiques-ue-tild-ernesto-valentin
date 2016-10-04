@@ -7,6 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AssessedCompetenciesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AssessedCompetenciesApplication.class, args);
-	}
+        SpringApplication.run(AssessedCompetenciesApplication.class, args);
+
+
+
+
+    }
 }
