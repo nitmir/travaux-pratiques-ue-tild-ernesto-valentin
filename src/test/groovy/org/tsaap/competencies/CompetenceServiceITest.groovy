@@ -75,17 +75,25 @@ class CompetenceServiceITest extends Specification {
 
     def "test save a valid competence"(){
         given: "a valid competence"
-            Competence competence = new Competence()
-            competence.setName("Competence 1")
-            competence.setDescription("Description de la competence 1")
+        Category category = new Category()
+        category.setName("Category 1")
+        competenceService.saveCategory(category)
+        Catalog catalog = new Catalog();
+        catalog.setName("Catalog 1");
+        competenceService.saveCatalog(catalog)
+        Competence competence = new Competence()
+        competence.setName("Competence 1")
+        competence.setDescription("Description de la competence 1")
+        competence.setCategory(category)
+        competence.setCatalog(catalog)
 
         when: "the competence is saved"
-            competenceService.saveCompetence(competence)
+        competenceService.saveCompetence(competence)
 
         then: "the competence newly added has an id"
-            competence.getId() != null
-            competence.getName() == "Competence 1"
-            competence.getDescription() == "Description de la competence 1"
+        competence.getId() != null
+        competence.getName() == "Competence 1"
+        competence.getDescription() == "Description de la competence 1"
     }
 
     def "test save a non valid competence"(){
