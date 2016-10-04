@@ -66,4 +66,4 @@ l'exécution des tests de manière automatique sur Travis-CI.
 - Créez un compte sur la plateforme [Coveralls](https://coveralls.io/) en vous authentifiant via votre compte Github.
 - Mettez en place le [plugin maven](https://github.com/trautonen/coveralls-maven-plugin) permettant d'interfacer un projet Maven avec Coveralls.
 - Modifiez votre fichier de configuration travis pour qu'en cas de succès, le rapport des tests cobertura soit envoyé sur Coveralls.
-- Testez votre configuration et visitez les rapports Coveralls de votre projet.
+- Testez votre configuration et visitez les différents rapports Coveralls de votre projet.
