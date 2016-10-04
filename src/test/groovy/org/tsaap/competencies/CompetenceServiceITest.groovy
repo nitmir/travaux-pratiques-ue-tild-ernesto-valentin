@@ -95,6 +95,8 @@ class CompetenceServiceITest extends Specification {
         competence.getId() != null
         competence.getName() == "Competence 1"
         competence.getDescription() == "Description de la competence 1"
+        competence.getCatalog().getId() == catalog.getId()
+        competence.getCategory().getId() == category.getId()
     }
 
     def "test save a non valid competence"(){
