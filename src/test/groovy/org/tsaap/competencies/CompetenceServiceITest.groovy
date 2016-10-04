@@ -41,7 +41,35 @@ class CompetenceServiceITest extends Specification {
         when: "the catalog is saved"
         competenceService.saveCatalog(catalog);
 
-        then: "the a validation exception is thrown"
+        then: "a validation exception is thrown"
+        thrown ConstraintViolationException
+    }
+
+    def "test save a valid category"() {
+        given: "a valid category"
+        Category category = new Category()
+        category.setName("Category 1")
+        category.setDescription("Description 2")
+
+        when: "the category is save"
+        competenceService.saveCategory(category)
+
+        then: "the category has an id"
+        category.getId() != null
+        category.getName() == "Category 1"
+        category.getDescription() == "Description 2"
+    }
+
+    def "test save a non valid category"() {
+        given: "a non valid category"
+        Category category = new Category()
+        category.setName("C2")
+        category.setDescription("Description 2")
+
+        when: "the category is saved"
+        competenceService.saveCategory(category)
+
+        then: "a validation exception is thrown"
         thrown ConstraintViolationException
     }
 
