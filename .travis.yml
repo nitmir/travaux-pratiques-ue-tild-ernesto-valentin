@@ -1,11 +1,8 @@
 language: java
-jdk:
-    - oraclejdk8
-    - oraclejdk7
+jdk: oraclejdk8
 cache:
     directories:
         - $HOME/.m2/
 script:
-    - mvn test
-after_success:
-    - mvn cobertura:cobertura -Dcobertura.report.format=xml coveralls:report -DrepoToken=$COVERALL_TOKEN
+    - mvn cobertura:cobertura -Dcobertura.report.format=xml coveralls:report -DrepoToken=$COVERALL_TOKEN | grep -v '^\[DEBUG\]'
+    - rm -r $HOME/.m2/repository/com/example/assessedcompetencies
