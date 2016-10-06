@@ -57,6 +57,12 @@ public class CompetenceService {
         Competence res = mCompetenceRepository.save(aCompetence);
         return res;
     }
+
+    /**
+     * save a category in the database
+     * @param category the categary to save
+     * @return the category
+     */
     public Category saveCategory(Category category) {
         Category res = categoryRepository.save(category);
         return res;
