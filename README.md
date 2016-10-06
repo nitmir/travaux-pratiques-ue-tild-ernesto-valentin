@@ -1,5 +1,8 @@
 # Master iLORD - Tests et intégration de logiciels distribués 
 
+[![Travis branch](https://badges.genua.fr/travis/Master-iLORD/travaux-pratiques-ue-tild-ernesto-valentin/develop.svg)]()
+[![Coveralls branch](https://badges.genua.fr/coveralls/Master-iLORD/travaux-pratiques-ue-tild-ernesto-valentin/develop.svg)](https://coveralls.io/github/Master-iLORD/travaux-pratiques-ue-tild-ernesto-valentin)
+
 ## Environnement de développement
 Vous travaillez en binôme avec des machines disposant des logiciels Git et IntelliJ.
 Vous pouvez travaillez sur vos propres machines à condition d'installer ces deux logiciels :
