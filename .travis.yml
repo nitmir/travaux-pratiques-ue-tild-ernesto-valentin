@@ -6,3 +6,6 @@ cache:
 script:
     - mvn cobertura:cobertura -Dcobertura.report.format=xml coveralls:report -DrepoToken=$COVERALL_TOKEN | grep -v '^\[DEBUG\]'
     - rm -r $HOME/.m2/repository/com/example/assessedcompetencies
+after_success:
+    - if [[ "$TRAVIS_BRANCH" = "master" ]]; then git push -f https://:$HEROKU_TOKEN@git.heroku.com/assessed-competencies.git master; fi;
+    - if [[ "$TRAVIS_BRANCH" = "develop" ]]; then git push -f https://:$HEROKU_TOKEN@git.heroku.com/assessed-competencies-dev.git develop:master; fi;
